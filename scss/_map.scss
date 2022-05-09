@@ -1,0 +1,126 @@
+.map {
+  padding: 120px 0px;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    padding: 80px 0px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0px;
+  }
+
+  @media (max-width: 475px) {
+    padding: 40px 0px;
+  }
+
+  &__container {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    padding: 0px 15px;
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: $black;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      font-size: 55px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+      font-size: 40px;
+    }
+
+    @media (max-width: 475px) {
+      font-size: 28px;
+    }
+
+    .drag-img {
+      display: none;
+      position: absolute;
+      bottom: -50px;
+      right: 40px;
+      width: 50px;
+      height: 50px;
+      transition: all .3s ease-in-out;
+      animation: drag 3s linear infinite;
+
+      @media (max-width: 1024px) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+      overflow-x: scroll;
+      justify-content: start;
+    }
+  }
+
+  &__img {
+    flex-shrink: 0;
+  }
+}
+
+.map {
+  &-area {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      fill: $accent;
+      fill-opacity: 1;
+
+      &+.map-point {
+        .circle--lg {
+          fill: #fff;
+        }
+
+        .circle--sm {
+          fill: $accent;
+        }
+      }
+    }
+
+  }
+
+  &-area,
+  &-point {
+    transition: all .3s linear;
+  }
+}
+
+@keyframes drag {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-20px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  75% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

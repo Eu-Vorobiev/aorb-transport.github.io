@@ -1,0 +1,150 @@
+.benefits {
+  padding: 120px 0px 74px;
+  position: relative;
+  background: #EAFBFF;
+
+  @media (max-width: 1024px) {
+    padding: 80px 0px 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0px 30px;
+  }
+
+  @media (max-width: 475px) {
+    padding: 30px 0px;
+  }
+
+  .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: linear-gradient(180deg, rgba(218, 248, 255, 0) 0%, rgba(218, 248, 255, 0.36) 19.64%, rgba(218, 248, 255, 0.6) 41.22%, #DAF8FF 66.05%);
+    transform: rotate(180deg);
+    height: 90%;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 80px;
+    max-width: 800px;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    color: rgba(1, 51, 45, 0.8);
+
+    @media (max-width: 1024px) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 475px) {
+      font-size: 18px;
+    }
+
+    a {
+      color: $accent;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    width: 32%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 900px) {
+      width: 31%;
+    }
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      width: 49%;
+    }
+
+    @media (max-width: 475px) {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+
+    span {
+      margin-bottom: 20px;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FFFFFF;
+      box-shadow: 0px 16px 32px -8px rgba(6, 70, 62, 0.1);
+      border-radius: 16px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      color: $accent;
+
+      @media (max-width: 575px) {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      letter-spacing: 0.04em;
+      color: rgba(1, 51, 45, 0.8);
+
+      @media (max-width: 575px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+}

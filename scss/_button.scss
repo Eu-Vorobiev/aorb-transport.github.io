@@ -1,0 +1,42 @@
+.btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: white;
+  padding: 17px 32px;
+  border-radius: 12px;
+  background-color: $accent;
+  @media (max-width: 360px) {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($accent, 10%);
+  }
+
+}
+
+// Animation for btn
+@keyframes flash {
+  0% {
+    background-color: $accent;
+  }
+
+  25% {
+    background-color: lighten($accent, 10%);
+  }
+
+  50% {
+    background-color: $accent;
+  }
+
+  75% {
+    background-color: darken($accent, 10%);
+  }
+
+  100% {
+    background-color: $accent;
+  }
+}
